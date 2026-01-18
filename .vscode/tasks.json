@@ -1,0 +1,68 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Flutter: Get dependencies",
+      "type": "shell",
+      "command": "flutter",
+      "args": [
+        "pub",
+        "get"
+      ],
+      "cwd": "${workspaceFolder}/mobile"
+    },
+    {
+      "label": "Flutter: Run dev server",
+      "type": "shell",
+      "command": "flutter",
+      "args": [
+        "run",
+        "-d",
+        "chrome"
+      ],
+      "cwd": "${workspaceFolder}/mobile",
+      "isBackground": true
+    },
+    {
+      "label": "Flutter: Run on Android emulator",
+      "type": "shell",
+      "command": "flutter",
+      "args": [
+        "run"
+      ],
+      "cwd": "${workspaceFolder}/mobile"
+    },
+    {
+      "label": "Flutter: Build APK",
+      "type": "shell",
+      "command": "flutter",
+      "args": [
+        "build",
+        "apk",
+        "--release"
+      ],
+      "cwd": "${workspaceFolder}/mobile"
+    },
+    {
+      "label": "Flutter: Run tests",
+      "type": "shell",
+      "command": "flutter",
+      "args": [
+        "test"
+      ],
+      "cwd": "${workspaceFolder}/mobile"
+    },
+    {
+      "label": "Generate code (build_runner)",
+      "type": "shell",
+      "command": "flutter",
+      "args": [
+        "pub",
+        "run",
+        "build_runner",
+        "build"
+      ],
+      "cwd": "${workspaceFolder}/mobile"
+    }
+  ]
+}

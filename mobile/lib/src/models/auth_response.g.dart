@@ -1,0 +1,31 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'auth_response.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+AuthResponse _$AuthResponseFromJson(Map<String, dynamic> json) => AuthResponse(
+      accessToken: json['access_token'] as String,
+      refreshToken: json['refresh_token'] as String,
+      userId: json['user_id'] as String,
+      expiresIn: (json['expires_in'] as num).toInt(),
+    );
+
+Map<String, dynamic> _$AuthResponseToJson(AuthResponse instance) =>
+    <String, dynamic>{
+      'access_token': instance.accessToken,
+      'refresh_token': instance.refreshToken,
+      'user_id': instance.userId,
+      'expires_in': instance.expiresIn,
+    };
+
+OtpResponse _$OtpResponseFromJson(Map<String, dynamic> json) => OtpResponse(
+      otpExpiresIn: (json['otp_expires_in'] as num).toInt(),
+    );
+
+Map<String, dynamic> _$OtpResponseToJson(OtpResponse instance) =>
+    <String, dynamic>{
+      'otp_expires_in': instance.otpExpiresIn,
+    };

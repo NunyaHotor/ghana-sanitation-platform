@@ -1,0 +1,53 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+Report _$ReportFromJson(Map<String, dynamic> json) => Report(
+      id: json['id'] as String?,
+      userId: json['user_id'] as String?,
+      category: json['category'] as String,
+      latitude: (json['latitude'] as num).toDouble(),
+      longitude: (json['longitude'] as num).toDouble(),
+      gpsAccuracy: (json['gps_accuracy'] as num).toDouble(),
+      capturedAt: json['captured_at'] as String,
+      photoUrls: (json['photo_urls'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      videoUrl: json['video_url'] as String?,
+      description: json['description'] as String?,
+      anonymous: json['anonymous'] as bool? ?? false,
+      createdAt: json['created_at'] as String?,
+      caseId: json['case_id'] as String?,
+      status: json['status'] as String? ?? 'submitted',
+      isSynced: json['is_synced'] as bool? ?? false,
+      localId: json['local_id'] as String?,
+      videoUrls: (json['video_urls'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      retryCount: (json['retry_count'] as num?)?.toInt() ?? 0,
+      lastAttemptAt: (json['last_attempt_at'] as num?)?.toInt(),
+      failed: json['failed'] as bool? ?? false,
+    );
+
+Map<String, dynamic> _$ReportToJson(Report instance) => <String, dynamic>{
+      'id': instance.id,
+      'user_id': instance.userId,
+      'category': instance.category,
+      'latitude': instance.latitude,
+      'longitude': instance.longitude,
+      'gps_accuracy': instance.gpsAccuracy,
+      'captured_at': instance.capturedAt,
+      'photo_urls': instance.photoUrls,
+      'video_url': instance.videoUrl,
+      'description': instance.description,
+      'anonymous': instance.anonymous,
+      'created_at': instance.createdAt,
+      'case_id': instance.caseId,
+      'status': instance.status,
+      'is_synced': instance.isSynced,
+      'local_id': instance.localId,
+      'video_urls': instance.videoUrls,
+      'retry_count': instance.retryCount,
+      'last_attempt_at': instance.lastAttemptAt,
+      'failed': instance.failed,
+    };
